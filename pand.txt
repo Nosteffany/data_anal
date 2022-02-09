@@ -1,0 +1,75 @@
+Introduction to pandas Data Structures
+
+
+    ********** TOPICS **********   
+ Index Objects
+ 
+ Essential Functionality
+     - Reindexing (obj.reindex)
+     - Dropping Entries from an Axis (obj.drop)
+    <- Indexing, Selection, and Filtering ([], loc, iloc, at, iat, get_value, set_value) 
+     - Integer Indexes 
+     - Arithmetic and Data Alignment --- elementwise operations (s1+s2, better use pandas or numpy arithmetic)
+     - Function Application and Mapping (apply, applymap)
+            NumPy ufuncs (element-wise array methods) also work with pandas objects
+      - Sorting and Ranking (sort_index, sort_values, rank)
+      - Axis Indexes with Duplicate Labels (obj.index.is_unique)
+  
+  
+  Summarizing and Computing Descriptive Statistics (any statistics functions)
+      - Correlation and Covariance (pct_change, corr, cov, corrwith)
+      - Unique Values, Value Counts, and Membership (obj.unique(), obj.isin, match)
+         
+  
+  Data Loading, Storage, and File Formats
+      - Reading and Writing Data in Text Format (read_csv ...)(attributes: path, sep, header,
+                                                               index_col, names, skiprows, na_values,                               
+                                                               comment, parse_dates, keep_date_col,                     
+                                                               converters, dayfirst, date_parser,
+                                                               nrows, iterator, chunksize, skip_footer 
+                                                               verbose, encoding, squeeze, thousands
+
+      - Reading Text Files in Pieces (chunksize, use like python file descriptor)
+      - Writing Data to Text Format (to_csv...)
+  
+
+  Data Cleaning and Preparation
+      - Handling Missing Data (isnull, dropna, fillna, notnull)
+      - Filtering Out Missing Data (dropna with attributes (treshold...))
+      - Filling In Missing Data (fillna with attributes)
+  
+  
+  Data Transformation
+      - Removing Duplicates (duplicated, drop_duplicates, drop_duplicates(['k1']), parameters: keep)
+      <- Transforming Data Using a Function or Mapping (df.map)
+      - Replacing Values (df.replace, arguments: [v1,v2...], [r1,r2...] The argument passed can also be a dict)
+      - Renaming Axis Indexes (rename, index.map)
+      <- Discretization and Binning (pd.cut, codes, categories, pd.qcut, attributes: precision, right, labels)
+      <- Detecting and Filtering Outliers (boolean masks, expressions)
+      - Permutation and Random Sampling (np.random.permutation, take, sample)
+      - Computing Indicator/Dummy Variables (get_dummies, unique, join)
+      - Vectorized String Functions in pandas (str functions)
+  
+  
+  Data Wrangling: Join, Combine,and Reshape (p 221)
+      <- Hierarchical Indexing (stack, unstack, loc, iloc)
+      <- Reordering and Sorting Levels (swaplevel, sort_index)
+      <- Summary Statistics by Level (sum, attributes: level, axis)
+      - Indexing with a DataFrame’s columns (set_index, By default the columns are removed
+                                            from the DataFrame, though you can leave them in
+                                            reset_index)
+     
+  Combining and Merging Datasets (merge, concat, join, combine_first) (230)
+      <- Database-Style DataFrame Joins (merge, attributes: ...)
+      <- Merging on Index (merge with attributes: right_index, left_index)
+      - Concatenating Along an Axis (np.concatenate, concat, attributes:...)
+      <- Combining Data with Overlap (combine_first)
+       
+      
+  Reshaping and Pivoting (243)
+      - Reshaping with Hierarchical Indexing
+      - Pivoting “Long” to “Wide” Format
+      - Pivoting “Wide” to “Long” Format
+
+
+
